@@ -9,8 +9,9 @@ import streamlit as st
 import pandas as pd
 
 # Load the data from Google Sheets
-url = 'https://docs.google.com/spreadsheet/ccc?key=1jB8WgMCj528yy7wB_RJuYj40hAJwkwnH-IkH-Tq34lg&output=xlsx'
-df = pd.read_excel(url, dtype={'date': str})
+url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4tpaKnM4S2MEro74GTkw0kAewYjeofL1qMkebfTnIBa3ktZwpAmNfLnOTHYI7Hykygwp6ggkRAcub/pub?gid=598831182&single=true&output=csv'
+
+df = pd.read_csv(url, dtype={'date': str})
 
 # Convert date_long column to datetime if needed
 df['date_long'] = pd.to_datetime(df['date_long'])
