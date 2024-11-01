@@ -45,5 +45,5 @@ st.subheader("All Games")
 
 # Display all games at the selected location
 st.write("All games at selected location:")
-st.table(df_location.drop(columns=['date_long']))
+st.table(df_location.sort_values(by='date_long').drop(columns=['date_long']))
 
